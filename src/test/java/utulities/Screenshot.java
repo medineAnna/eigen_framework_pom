@@ -14,14 +14,14 @@ public class Screenshot {
 
     public static void webElementScreenshot(WebElement webElement) throws IOException {
         String tarih=new SimpleDateFormat("yyMMddhhmmss").format(new Date());
-        File webElementSS=new File("target/screenshot/webelement"+tarih+".jpg");
+        File webElementSS=new File("target/screenshot/WebelementSS"+tarih+".jpg");
         File geciciResim=webElement.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(geciciResim,webElementSS);
     }
     public static void tumSayfaScreenshot() throws IOException {
         TakesScreenshot tss= (TakesScreenshot) Driver.getDriver();
         String tarih=new SimpleDateFormat("yyMMddhhmmss").format(new Date());
-        File tumSayfa=new File("target/screenshot/webelement"+tarih+".jpg");
+        File tumSayfa=new File("target/screenshot/tumSayfaSS"+tarih+".jpg");
         File geciciResim=tss.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(geciciResim,tumSayfa);
     }
